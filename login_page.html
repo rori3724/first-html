@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="./login-page.css">
+</head>
+
+<script language="javascript">
+
+function CheckSubmit()
+{
+  if (document.loginform.username.value == "" ) {
+        alert("아이디를 입력해 주세요!");
+        return false;
+  }
+  if (document.loginform.password.value == "" ) {
+        alert("비밀번호를 입력해 주세요!");
+        return false;
+  }
+  if (document.loginform.username.value == "1234" && 
+      document.loginform.password.value == "1234") {
+        alert("성공적으로 로그인하였습니다");
+      document.loginform.action="./action_page.html";
+  }
+  else if (document.loginform.username.value == "ㅁㄴㅇㄹ" && 
+        document.loginform.password.value == "ㅁㄴㅇㄹ") {
+        alert("야 너 ㅁㄴㅇㄹ 처셔 로그인하게?어림도 없지!암!");
+  } else {
+        alert("아이디 또는 비번이 틀렸습니다");
+        return false;
+  }  
+}
+
+</script>
+
+<body>
+  <main id="main-holder">
+    
+    <h1 id="login-header">Login</h1>
+    
+    <div id="login-error-msg-holder">
+      <p id="login-error-msg">아이디 또는 비밀번호가 <span id="error-msg-second-line"> 일치하지 않습니다</span></p>
+    </div>
+    
+    <form id="login-form" name="loginform" method="post" onsubmit="CheckSubmit();" >
+      <input type="text" name="아이디" id="username"  class="login-form-field" placeholder="아이디">
+      <input type="password" name="비번" id="password" class="login-form-field" placeholder="비번">
+      <input type="submit" value="Login" id="login-form-submit" > 
+    </form>
+    <div class="container">
+      <span class="psw"> <a href="Find Password.html">아이디 또는 비번을 잊어버리셨나요??</a></span>
+    </div>
+
+  
+  </main>
+</body>
+</html>
