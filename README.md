@@ -5,7 +5,7 @@
 
 ![Language](https://img.shields.io/badge/language-html-brightgreen)
 ![Language](https://img.shields.io/badge/language-css-brightgreen)
-![Language](https://img.shields.io/badge/language-javasript-brightgreen)
+![Language](https://img.shields.io/badge/language-Javasript-brightgreen)
 
 저작권
 
